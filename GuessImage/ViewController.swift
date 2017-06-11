@@ -16,8 +16,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var textView: UITextView!
 	
-	fileprivate let model = Inceptionv3()
-	
 	let imagePicker = UIImagePickerController()
 	
 	//MARK: - ViewController
@@ -88,6 +86,6 @@ extension ViewController {
 				print("did throw on performing a VNCoreRequest")
 			}
 		}
-		}
+	}
 }
 
