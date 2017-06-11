@@ -67,9 +67,7 @@ extension ViewController {
 				guard let results = request.results as? [VNClassificationObservation] else { fatalError("Failure") }
 				var text = ""
 				for classification in results {
-					if classification.confidence > 0.005 {
 						text.append("\n" + "\(classification.identifier, classification.confidence)")
-					}
 				}
 				
 				DispatchQueue.main.async {
@@ -88,4 +86,3 @@ extension ViewController {
 		}
 	}
 }
-
