@@ -57,7 +57,7 @@ extension ViewController {
 	
 	func processImage(_ image: CGImage, completion: @escaping (String)->Void ){
 		
-		DispatchQueue.global(qos: .background).async {
+		DispatchQueue.global(qos: .userInitiated).async {
 			
 			//Init Core Vision Model
 			guard let vnCoreModel = try? VNCoreMLModel(for: Inceptionv3().model) else { return }
